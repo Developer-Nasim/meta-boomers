@@ -160,7 +160,10 @@ a.theme-btn svg {
   border-radius: 50px;
   background:#000;
 }
-
+a.theme-btn svg {
+  width: 24px;
+  height: auto;
+}
 
 
 /* humbergar */
