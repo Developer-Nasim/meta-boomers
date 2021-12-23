@@ -11,8 +11,8 @@ body {
   opacity: 0.8;
   background-color: #000000;
   background-image: url(../img/whole-backg.png);
-  background-size: 100% 100%;
-  /* background-repeat: repeat; */
+  /* background-size: 100% 100%; */
+  background-repeat: repeat;
 }
 
   
@@ -169,6 +169,7 @@ a.theme-btn svg {
   height: 35px;
   float: right;
   position: relative;
+  display: block;
 } 
 .bar a span {
   width: 100%;
@@ -185,6 +186,10 @@ a.theme-btn svg {
 .bar a span:before {left: 0;content: "";position: absolute;width: 100%;height: 100%;background: #fff;bottom: 10px;border-radius: 30px;-webkit-transition: .3s;-o-transition: .3s;transition: .3s;} 
 .bar a span:after {left: 0;content: "";position: absolute;width: 100%;height: 100%;background: #fff;bottom: -10px;border-radius: 30px;-webkit-transition: .3s;-o-transition: .3s;transition: .3s;}
  
+.bar a svg {
+  width: 100%;
+  margin-top: -5px;
+}
 /* humbarger END */
  
 
@@ -193,7 +198,7 @@ a.theme-btn svg {
   position: fixed;
   width: 320px;
   height: 100vh;
-  background: #ffffff;
+  background: #000;
   z-index: 99;
   -webkit-box-shadow: 0px 0px 9px -1px #737373;
           box-shadow: 0px 0px 9px -1px #737373;
@@ -206,40 +211,48 @@ a.theme-btn svg {
   padding-left: 40px;
   padding-top: 100px;
 }
+.mobile-menu img.backg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-height: 70%;
+  width: 100%;
+  display: block;
+  transform: scale(1.2);
+  z-index: -1;
+}
 .siteBar{
   margin-left: 0; 
 }
-.mobile-menu ul#pills-tab {
-  margin-top: 90px;
-  margin-bottom: 35px !important;
-  display: block;
-}
-.mobile-menu  nav ul li {
-  list-style: none;
-  display: block;
-}
-
-.mobile-menu nav ul li a {
-  color: #272835;
-  font-size: 16px;
-  line-height: 40px;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
+a.langs {
+  position: absolute;
+  top: 22px;
+  left: 30px;
+  padding: 6px 15px;
+  color: #000;
+  background: #fff;
+  border-radius: 50px;
+  font-weight: 700;
   transition: .3s;
 }
-
-.mobile-menu nav ul li a:hover { 
-  color: #ff4900;
+.mobile-menu nav ul li {
+  list-style: none;
+  display: block;
+  margin-bottom: 20px;
 }
-
-.mobile-menu ul#pills-tab li {
-  display: inline-block;
+.mobile-menu nav ul li a {
+  font-size: 24px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
 }
-
-.mobile-menu ul#pills-tab li a {
-  color: #272835;
-  font-size: 15px;
-} 
+.mobile-menu nav ul li a img {
+  margin-right: 10px;
+  transform: rotateY(
+-180deg);
+}
 .mobile-menu a.theme-btn {
   margin-top: 60px;
   margin-left: 0;
@@ -272,8 +285,7 @@ a.theme-btn svg {
   right: 20px;
   top: 15px;
   width: 40px;
-  height: 40px;
-  background: #ff4900;
+  height: 40px; 
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
@@ -282,7 +294,10 @@ a.theme-btn svg {
   -webkit-box-shadow: 0px 0px 17px -2px #0000004a;
           box-shadow: 0px 0px 17px -2px #0000004a;
 }
-
+.menu-area nav ul li:last-child a.theme-btn span {
+  display: inline-block;
+  font-weight: 900;
+}
 
 
 /* Header-area END and Hero-area STARTED */
@@ -294,8 +309,9 @@ a.theme-btn svg {
 .hero-area {
   position: relative;
   padding-top: 200px;
+  background: #000;
+  z-index: 2;
 }
-
 .hero-area img.background {
   width: 100%;
   position: absolute;
@@ -328,7 +344,9 @@ a.theme-btn svg {
           transform: rotateY(180deg);
 }
 .anims img:nth-child(3){
-  margin: 0 -130px
+  margin: 0 -130px;
+  position:relative;
+  z-index: 2;
 }
 
 
@@ -348,7 +366,10 @@ a.theme-btn svg {
           align-items: center;
   margin-top: 30px;
 }
-
+ul.btn_icons {
+  display: flex;
+  align-items: center;
+}
 ul.btn_icons li {
   display: inline-block;
   margin-left: 15px;
@@ -408,8 +429,8 @@ ul.btn_icons a.icon:hover svg path {
   width: auto;
   z-index: 2;
   height: 760px;
+  object-fit: cover;
 }
-
 
 
 
@@ -553,7 +574,7 @@ ul.roadmap-wrp ul {
 }
 
 ul.roadmap-wrp ul:before {
-  content: "20202";
+  content: "2022";
   position: absolute;
   left: -100px;
   top: 30px;
